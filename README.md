@@ -12,9 +12,10 @@
 		<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/LordOfTrident/cargs?color=4f79e4"/>
 	</a>
 	<br><br><br>
+	<img width="65%" src="res/img.png"/>
 </p>
 
-A simple single-header STB-style library for parsing command line arguments and flags (similar to
+A simple single-header STB-style C library for parsing command line arguments and flags (similar to
 Golang's flag package).
 
 ## Table of contents
