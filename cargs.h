@@ -19,7 +19,7 @@ typedef struct {
 
 args_t new_args(int argc, const char **argv);
 
-bool arg_is_flag(const char *arg);
+bool arg_is_flag(     const char *arg);
 bool arg_is_flag_long(const char *arg);
 bool arg_is_flags_end(const char *arg);
 
@@ -36,15 +36,15 @@ enum {
 	ARG_OUT_OF_MEM,
 };
 
-const char *args_shift(args_t *a);
+const char *args_shift(      args_t *a);
 int         args_parse_flags(args_t *a, int *where, args_t *stripped);
 
-void flag_cstr(const char  *short_name, const char *long_name, const char *desc, char  **var);
-void flag_char(const char  *short_name, const char *long_name, const char *desc, char   *var);
-void flag_int(const char   *short_name, const char *long_name, const char *desc, int    *var);
-void flag_size(const char  *short_name, const char *long_name, const char *desc, size_t *var);
+void flag_cstr( const char *short_name, const char *long_name, const char *desc, char  **var);
+void flag_char( const char *short_name, const char *long_name, const char *desc, char   *var);
+void flag_int(  const char *short_name, const char *long_name, const char *desc, int    *var);
+void flag_size( const char *short_name, const char *long_name, const char *desc, size_t *var);
 void flag_float(const char *short_name, const char *long_name, const char *desc, double *var);
-void flag_bool(const char  *short_name, const char *long_name, const char *desc, bool   *var);
+void flag_bool( const char *short_name, const char *long_name, const char *desc, bool   *var);
 
 void args_print_flags(FILE *file);
 void args_print_usage(FILE *file, const char *app_name, const char *usage);
