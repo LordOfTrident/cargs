@@ -15,7 +15,7 @@
 	<img width="65%" src="res/img.png"/>
 </p>
 
-A simple single-header STB-style C library for parsing command line arguments and flags (similar to
+A simple single-header [STB-style](https://github.com/nothings/stb) C library for parsing command line arguments and flags (similar to
 Golang's flag package).
 
 ## Table of contents
