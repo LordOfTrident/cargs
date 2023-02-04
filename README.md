@@ -1,6 +1,4 @@
 <h1 align="center">cargs</h1>
-<p align="center">A command line arguments parsing library for C</p>
-
 <p align="center">
 	<a href="./LICENSE">
 		<img alt="License" src="https://img.shields.io/badge/license-GPL-blue?color=26d374"/>
@@ -11,8 +9,8 @@
 	<a href="https://github.com/LordOfTrident/cargs/pulls">
 		<img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/LordOfTrident/cargs?color=4f79e4"/>
 	</a>
+	<img width="80%" src="res/thumbnail.png"/>
 	<br><br><br>
-	<img width="65%" src="res/img.png"/>
 </p>
 
 A simple single-header [STB-style](https://github.com/nothings/stb) C library for parsing command line arguments and flags (similar to
@@ -48,6 +46,9 @@ int main(int argc, const char **argv) {
 	return 0;
 }
 ```
+Output
+
+<img width="65%" src="res/img.png"/>
 
 ## Quickstart
 Since cargs is a single-header library, you can just copy [`cargs.h`](./cargs.h) into your project
