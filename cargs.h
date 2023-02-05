@@ -16,7 +16,7 @@
 
 #define CARGS_VERSION_MAJOR 1
 #define CARGS_VERSION_MINOR 0
-#define CARGS_VERSION_PATCH 0
+#define CARGS_VERSION_PATCH 1
 
 typedef struct {
 	int          c;
@@ -409,7 +409,8 @@ void args_print_flags(FILE *file) {
 
 		fprintf(file, "    %s", f->desc);
 
-		if (f->type == FLAG_BOOL && !f->def.bool_) {
+		if ((f->type == FLAG_BOOL && !f->def.bool_) ||
+		    (f->type == FLAG_CSTR && f->def.cstr == NULL)) {
 			fprintf(file, "\n");
 			continue;
 		}
