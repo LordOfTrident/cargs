@@ -1,3 +1,5 @@
+/* #define CARGS_IMPLEMENTATION */
+
 #ifndef CARGS_H_HEADER_GUARD
 #define CARGS_H_HEADER_GUARD
 
