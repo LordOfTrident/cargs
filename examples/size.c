@@ -23,7 +23,7 @@ int main(int argc, const char **argv) {
 	int    err = args_parse_flags(&a, &where, &stripped); /* parse the flags */
 	if (err != ARG_OK) {
 		switch (err) {
-		case ARG_OUT_OF_MEM:    assert("malloc() fail");
+		case ARG_OUT_OF_MEM:    assert(0 && "malloc() fail");
 		case ARG_UNKNOWN:       fprintf(stderr, "Error: Unknown flag '%s'\n", a.v[where]);  break;
 		case ARG_MISSING_VALUE: fprintf(stderr, "Error: '%s' missing value\n", a.v[where]); break;
 
