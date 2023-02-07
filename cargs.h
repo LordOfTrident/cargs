@@ -8,6 +8,10 @@
 #ifndef CARGS_H_HEADER_GUARD
 #define CARGS_H_HEADER_GUARD
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include <stdio.h>   /* fprintf, stderr, FILE */
 #include <stdlib.h>  /* size_t, malloc, free, strtol, strtoull, strtod */
 #include <stdbool.h> /* bool, true, false */
@@ -15,7 +19,7 @@
 #include <assert.h>  /* assert */
 
 #define CARGS_VERSION_MAJOR 1
-#define CARGS_VERSION_MINOR 0
+#define CARGS_VERSION_MINOR 1
 #define CARGS_VERSION_PATCH 1
 
 typedef struct {
@@ -56,9 +60,17 @@ void flag_bool( const char *short_name, const char *long_name, const char *desc,
 void args_print_flags(FILE *file);
 void args_print_usage(FILE *file, const char *app_name, const char *usage);
 
+#ifdef __cplusplus
+}
+#endif
+
 #endif
 
 #ifdef CARGS_IMPLEMENTATION
+
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 args_t new_args(int argc, const char **argv) {
 	return (args_t){.c = argc, .v = argv, .base = (char**)argv};
@@ -432,5 +444,9 @@ void args_print_usage(FILE *file, const char *app_name, const char *usage) {
 	fprintf(file, "Usage: %s %s\nOptions:\n", app_name, usage);
 	args_print_flags(file);
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
