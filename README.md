@@ -52,7 +52,8 @@ Output
 
 ## Quickstart
 Since cargs is a single-header library, you can just copy [`cargs.h`](./cargs.h) into your project
-and include it. [See the example](./examples/size.c) to see how to use the library.
+and include it, or submodule this repository and include the header.
+[See the example](./examples/size.c) to see how to use the library.
 
 To compile and run the example, run
 ```sh
