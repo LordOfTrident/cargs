@@ -19,8 +19,16 @@ extern "C" {
 #include <assert.h>  /* assert */
 
 #define CARGS_VERSION_MAJOR 1
-#define CARGS_VERSION_MINOR 1
+#define CARGS_VERSION_MINOR 2
 #define CARGS_VERSION_PATCH 1
+
+#define FOREACH_IN_ARGS(ARGS, ARG_VAR, BODY) \
+	do { \
+		for (int i = 0; i < (ARGS).c; ++ i) { \
+			const char *ARG_VAR = (ARGS).v[i]; \
+			BODY \
+		} \
+	} while (0)
 
 typedef struct {
 	int          c;

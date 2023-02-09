@@ -50,8 +50,9 @@ int main(int argc, const char **argv) {
 	}
 
 	/* Print all the non-flag arguments */
-	for (int i = 0; i < stripped.c; ++ i)
-		printf("'%s',\n", stripped.v[i]);
+	FOREACH_IN_ARGS(stripped, arg, {
+		printf("'%s',\n", arg);
+	});
 
 	printf("%zu\n", size);
 	for (size_t i = 0; i < size; ++ i)
